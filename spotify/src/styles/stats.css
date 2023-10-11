@@ -1,0 +1,157 @@
+body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.firstH2 {
+    margin-top: 10px;
+}
+
+.stats {
+    background-color: #272727;
+    color: #fff;
+    height: 100%;
+}
+
+.pagewrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0px 30px 50px 30px
+}
+
+.containerProfile {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+.containerProfileBig {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profilePicture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: solid #fff 3px;
+}
+
+.containerProfileSmall {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerProfileSmall h1,
+p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.containerProduct {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.profileProduct {
+    font-weight: bold;
+}
+
+.crown {
+    width: 30px;
+}
+
+.profileProduct::first-letter {
+    text-transform: uppercase;
+}
+
+.profilePremium {
+    color: #ffff00;
+}
+
+.containerTimeframes {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.activeTimeframe {
+    color: #1FB453;
+    pointer-events: none;
+}
+
+.inActiveTimeframe {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.timeframeP:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.containerTopTracksArrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    font-size: 40px;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.containerTopTracks {
+    display: flex;
+    overflow: scroll;
+    gap: 25px;
+    text-align: center;
+}
+
+.imageCover {
+    width: 220px;
+    height: 220px;
+}
+
+.containerTopTracks::-webkit-scrollbar {
+    display: none;
+}
+
+.containerTopTracks img {
+    border: 3px solid #dbd5d5;
+}
+
+.containerTopTracks p {
+    font-size: 18px;
+    margin-top: 15px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.enabled {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
