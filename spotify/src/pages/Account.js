@@ -4,20 +4,20 @@ import axios from 'axios'
 function Account() {
     const params = new URLSearchParams(window.location.search);
     const sendCodeToBackEnd = async () => {
-        await axios.post("http://localhost:8080/api/code/getTokens", {
+        await axios.post("http://localhost:8080/api/tokens/getTokens", {
             code: params.get("code")
         }).then(async (res) => {
             if (res.status == 200) {
-                await axios.post("http://localhost:8080/api/code/profile").then((res) => {
+                await axios.post("http://localhost:8080/api/user/profile").then((res) => {
                     let data = res.data
+                    console.log(res.data);
                     localStorage.setItem('Profile', JSON.stringify({
                         display_name: data.display_name,
                         followers: data.followers.total,
                         profilePicture: data.images[1].url,
-                        product: data.product
-
+                        product: data.product,
+                        country: data.country
                     })
-
                     )
                     window.location.href = `http://localhost:3000/${data.id}`
                 })
@@ -38,7 +38,6 @@ function Account() {
 
     return (
         <div className='stats'>
-
         </div>
     )
 }

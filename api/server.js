@@ -2,8 +2,9 @@
 const express = require("express");
 const cors = require('cors')
 const mongoose = require('mongoose')
-const users = require('./routes/user')
-const code = require('./routes/code')
+const user = require('./routes/user')
+const player = require('./routes/player');
+const tokens = require("./routes/tokens");
 require('dotenv').config()
 
 const PORT = 8080;
@@ -24,8 +25,10 @@ const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Connected to Database"));
 
-app.use("/api/user", users);
-app.use("/api/code", code);
+app.use("/api/tokens", tokens);
+app.use("/api/user", user);
+app.use("/api/player", player);
+
 
 app.get("/api/", (req, res) => {
     res.send("Spotify");
