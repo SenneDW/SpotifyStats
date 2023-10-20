@@ -1,5 +1,5 @@
 # SpotifyStats
-Work In Progress, Project is still under development.
+Work In Progress, Project is still under development. (Not responsive)
 
 Personal project to show stats from a Spotify user. 
 Stats are based on calculated affinity.
